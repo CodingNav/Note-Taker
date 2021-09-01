@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/CodingNav/Note-Taker/issues"
   },
-  "homepage": "https://github.com/CodingNav/Note-Taker#readme"
+  "homepage": "https://github.com/CodingNav/Note-Taker#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

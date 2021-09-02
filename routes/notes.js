@@ -7,6 +7,17 @@ router.get('/', (req, res) => {
         const parsedData = JSON.parse(data);
         res.json(parsedData);
     });
+});
+
+router.post('/', (req, res) => {
+    console.log(req.body);
+    fs.readFile(path.join(__dirname, '../db/db.json'), (err, data) => {
+        const parsedData = JSON.parse(data);
+        parsedData.push(req.body);
+        fs.writeFile(path.join(__dirname, '../db/db.json'), JSON.stringify(parsedData), (err) => {
+            res.json(parsedData);
+        });
+    });
 
 });
 

@@ -3,11 +3,15 @@
 # Note-Taker
 
 ## Table of Contents
+* <a href="#about">Link</a>
 * <a href="#about">About</a>
 * <a href="#preview">Preview</a>
 * <a href="#user-story">User Story</a>
 * <a href="#acceptance-criteria">Acceptance Criteria</a>
 * <a href="#technologies">Technologies</a>
+
+## Link
+<b>Link to site:</b> https://codingnav-note-taker.herokuapp.com/
 
 ## About 
 <i><b>Note Taker</b></i> is an application that uses an Express.js back end to allow the user to write and saves notes.

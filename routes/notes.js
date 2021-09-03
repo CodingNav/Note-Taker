@@ -4,13 +4,19 @@ const path = require('path');
 
 router.get('/', (req, res) => {
     fs.readFile(path.join(__dirname, '../db/db.json'), (err, data) => {
-        const parsedData = JSON.parse(data);
+        let parsedData = JSON.parse(data);
+        parsedData = parsedData.map((val, index) => {
+            return {
+                id: index + 1,
+                title: val.title,
+                text: val.text
+            };
+        });
         res.json(parsedData);
     });
 });
 
 router.post('/', (req, res) => {
-    console.log(req.body);
     fs.readFile(path.join(__dirname, '../db/db.json'), (err, data) => {
         const parsedData = JSON.parse(data);
         parsedData.push(req.body);
@@ -18,7 +24,7 @@ router.post('/', (req, res) => {
             res.json(parsedData);
         });
     });
-
 });
+
 
 module.exports = router;
